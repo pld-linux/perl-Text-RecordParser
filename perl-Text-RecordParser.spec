@@ -36,8 +36,17 @@ name. If the first line contains data, you can still bind your own
 field names via bind_fields. Either way, you can then use many methods
 to get at the data as arrays or hashes.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ s³u¿y do czytania danych zorientowanych rekordowo.
+Najpopularniejszy przyk³ad to rekordy oddzielone nowymi liniami i pola
+oddzielone przecinkami lub tabulatorami, ale celem tego modu³u jest
+dostarczenie spójnego interfejsu do obs³ugi sekwencyjnych rekordów w
+pliku niezale¿nie od sposobu ich rozdzielenia. Typowo dane te
+okre¶laj± pola w pierwszej linii pliku - w tym przypadku nale¿y
+wywo³aæ bind_header aby podpi±æ nazwy pól. Je¶li pierwsza linia
+zawiera dane, nadal mo¿na podpi±æ w³asne nazwy pól poprzez
+bind_fields. W ka¿dym przypadku mo¿na potem u¿ywaæ wielu metod
+pobierania danych jako tablice lub hasze.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
