@@ -7,7 +7,7 @@
 %define	pdir	Text
 %define	pnam	RecordParser
 Summary:	Text::RecordParser - read record-oriented files
-Summary(pl):	Text::RecordParser - odczyt plikÛw rekordowych
+Summary(pl.UTF-8):   Text::RecordParser - odczyt plik√≥w rekordowych
 Name:		perl-Text-RecordParser
 Version:	0.08
 Release:	1
@@ -36,16 +36,16 @@ name. If the first line contains data, you can still bind your own
 field names via bind_fields. Either way, you can then use many methods
 to get at the data as arrays or hashes.
 
-%description -l pl
-Ten modu≥ s≥uøy do czytania danych zorientowanych rekordowo.
-Najpopularniejszy przyk≥ad to rekordy oddzielone nowymi liniami i pola
-oddzielone przecinkami lub tabulatorami, ale celem tego modu≥u jest
-dostarczenie spÛjnego interfejsu do obs≥ugi sekwencyjnych rekordÛw w
-pliku niezaleønie od sposobu ich rozdzielenia. Typowo dane te
-okre∂laj± pola w pierwszej linii pliku - w tym przypadku naleøy
-wywo≥aÊ bind_header aby podpi±Ê nazwy pÛl. Je∂li pierwsza linia
-zawiera dane, nadal moøna podpi±Ê w≥asne nazwy pÛl poprzez
-bind_fields. W kaødym przypadku moøna potem uøywaÊ wielu metod
+%description -l pl.UTF-8
+Ten modu≈Ç s≈Çu≈ºy do czytania danych zorientowanych rekordowo.
+Najpopularniejszy przyk≈Çad to rekordy oddzielone nowymi liniami i pola
+oddzielone przecinkami lub tabulatorami, ale celem tego modu≈Çu jest
+dostarczenie sp√≥jnego interfejsu do obs≈Çugi sekwencyjnych rekord√≥w w
+pliku niezale≈ºnie od sposobu ich rozdzielenia. Typowo dane te
+okre≈õlajƒÖ pola w pierwszej linii pliku - w tym przypadku nale≈ºy
+wywo≈Çaƒá bind_header aby podpiƒÖƒá nazwy p√≥l. Je≈õli pierwsza linia
+zawiera dane, nadal mo≈ºna podpiƒÖƒá w≈Çasne nazwy p√≥l poprzez
+bind_fields. W ka≈ºdym przypadku mo≈ºna potem u≈ºywaƒá wielu metod
 pobierania danych jako tablice lub hasze.
 
 %prep
