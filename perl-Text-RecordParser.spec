@@ -7,7 +7,7 @@
 %define	pdir	Text
 %define	pnam	RecordParser
 Summary:	Text::RecordParser - read record-oriented files
-Summary(pl.UTF-8):   Text::RecordParser - odczyt plików rekordowych
+Summary(pl.UTF-8):	Text::RecordParser - odczyt plików rekordowych
 Name:		perl-Text-RecordParser
 Version:	0.08
 Release:	1
