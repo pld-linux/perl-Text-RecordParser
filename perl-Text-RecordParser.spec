@@ -9,13 +9,13 @@
 Summary:	Text::RecordParser - read record-oriented files
 Summary(pl.UTF-8):	Text::RecordParser - odczyt plików rekordowych
 Name:		perl-Text-RecordParser
-Version:	0.08
+Version:	1.2.1
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	db2490a5548247da8d393f945d9a245e
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-v%{version}.tar.gz
+# Source0-md5:	65c2a85a2ed2a9bc791d377954bd5a44
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -49,7 +49,7 @@ bind_fields. W każdym przypadku można potem używać wielu metod
 pobierania danych jako tablice lub hasze.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-v%{version}
 
 %build
 %{__perl} Makefile.PL \
@@ -72,4 +72,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes INSTALL TODO
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/Text/*.pm
+%{perl_vendorlib}/Text/RecordParser
 %{_mandir}/man?/*
