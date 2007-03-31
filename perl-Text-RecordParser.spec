@@ -14,8 +14,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-v%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-v%{version}.tar.gz
 # Source0-md5:	65c2a85a2ed2a9bc791d377954bd5a44
+URL:		http://search.cpan.org/dist/Text-RecordParser/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
