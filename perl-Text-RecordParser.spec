@@ -10,7 +10,7 @@ Summary:	Text::RecordParser - read record-oriented files
 Summary(pl.UTF-8):	Text::RecordParser - odczyt plików rekordowych
 Name:		perl-Text-RecordParser
 Version:	1.2.1
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
