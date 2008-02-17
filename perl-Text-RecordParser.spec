@@ -17,14 +17,14 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-v%{version}.tar.gz
 # Source0-md5:	65c2a85a2ed2a9bc791d377954bd5a44
 URL:		http://search.cpan.org/dist/Text-RecordParser/
-# sigh... perl.prov can't handle version->new(...) -- Safe.pm
-Provides:	perl(Text::RecordParser) = %{version}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Text-TabularDisplay >= 1.21
 BuildConflicts:	perl-Text-TabularDisplay = 1.20
 %endif
+# sigh... perl.prov can't handle version->new(...) -- Safe.pm
+Provides:	perl(Text::RecordParser) = %{version}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
