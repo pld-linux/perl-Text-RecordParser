@@ -10,13 +10,15 @@ Summary:	Text::RecordParser - read record-oriented files
 Summary(pl.UTF-8):	Text::RecordParser - odczyt plików rekordowych
 Name:		perl-Text-RecordParser
 Version:	1.2.1
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-v%{version}.tar.gz
 # Source0-md5:	65c2a85a2ed2a9bc791d377954bd5a44
 URL:		http://search.cpan.org/dist/Text-RecordParser/
+# sigh... perl.prov can't handle version->new(...) -- Safe.pm
+Provides:	perl(Text::RecordParser) = %{version}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -25,6 +27,8 @@ BuildConflicts:	perl-Text-TabularDisplay = 1.20
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(Text::RecordParser)'
 
 %description
 This module is for reading record-oriented data. The most common
