@@ -3,7 +3,6 @@
 %bcond_with	tests		# perform "make test"
 				# Text::TabularDisplay 1.21 not available yet
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	RecordParser
 Summary:	Text::RecordParser - read record-oriented files
