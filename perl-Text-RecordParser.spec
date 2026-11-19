@@ -1,24 +1,29 @@
 #
 # Conditional build:
-%bcond_with	tests		# perform "make test"
-				# Text::TabularDisplay 1.21 not available yet
+%bcond_without	tests		# do not perform "make test"
 #
 %define	pdir	Text
 %define	pnam	RecordParser
 Summary:	Text::RecordParser - read record-oriented files
 Summary(pl.UTF-8):	Text::RecordParser - odczyt plików rekordowych
 Name:		perl-Text-RecordParser
-Version:	1.2.1
-Release:	4
+Version:	1.6.5
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-v%{version}.tar.gz
-# Source0-md5:	65c2a85a2ed2a9bc791d377954bd5a44
+Source0:	https://www.cpan.org/authors/id/K/KC/KCLARK/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	9a1a71d37c2b89d9290e1c9207102276
 URL:		http://search.cpan.org/dist/Text-RecordParser/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Class-Accessor
+BuildRequires:	perl-IO-stringy
+BuildRequires:	perl-List-MoreUtils
+BuildRequires:	perl-Readonly
+BuildRequires:	perl-Test-Exception
+BuildRequires:	perl-Text-Autoformat
 BuildRequires:	perl-Text-TabularDisplay >= 1.21
 BuildConflicts:	perl-Text-TabularDisplay = 1.20
 %endif
@@ -53,7 +58,7 @@ bind_fields. W każdym przypadku można potem używać wielu metod
 pobierania danych jako tablice lub hasze.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-v%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 %{__perl} Makefile.PL \
